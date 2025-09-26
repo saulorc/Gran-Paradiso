@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gran Paradiso Resort — Campos do Jordão</title>
+  <meta name="description" content="Anúncio do resort para publicar no GitHub Pages. Clique nas imagens para ampliá-las." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-hero">
+      <h1>Campos do Jordão — Gran Paradiso Resort</h1>
+      <p class="lead">Feriado da Consciência Negra — 7 noites | 16 a 23/11/25</p>
+    </header>
+
+    <!-- Grid de imagens (substitua as imagens em /images) -->
+    <div class="grid" aria-live="polite">
+
+      <figure class="thumb-card">
+        <img src="images/photo-1-thumb.jpg" data-full="images/photo-1.jpg" alt="Lobby do resort" tabindex="0">
+        <figcaption class="thumb-caption">Lobby elegante — escadaria e iluminação.</figcaption>
+      </figure>
+
+      <figure class="thumb-card">
+        <img src="images/photo-2-thumb.jpg" data-full="images/photo-2.jpg" alt="Quarto confortável" tabindex="0">
+        <figcaption class="thumb-caption">Apartamento amplo e aconchegante.</figcaption>
+      </figure>
+
+      <figure class="thumb-card">
+        <img src="images/photo-3-thumb.jpg" data-full="images/photo-3.jpg" alt="Piscina" tabindex="0">
+        <figcaption class="thumb-caption">Piscina com cobertura e vista.</figcaption>
+      </figure>
+
+      <figure class="thumb-card">
+        <img src="images/photo-4-thumb.jpg" data-full="images/photo-4.jpg" alt="Jacuzzi" tabindex="0">
+        <figcaption class="thumb-caption">Área de Spa com jacuzzi.</figcaption>
+      </figure>
+
+      <figure class="thumb-card">
+        <img src="images/photo-5-thumb.jpg" data-full="images/photo-5.jpg" alt="Sala de jogos" tabindex="0">
+        <figcaption class="thumb-caption">Sala de entretenimento e cinema.</figcaption>
+      </figure>
+
+      <figure class="thumb-card">
+        <img src="images/photo-6-thumb.jpg" data-full="images/photo-6.jpg" alt="Vista do vale" tabindex="0">
+        <figcaption class="thumb-caption">Varanda com vista para o vale e pôr do sol.</figcaption>
+      </figure>
+
+    </div>
+
+    <!-- Texto descritivo -->
+    <section class="story" aria-labelledby="storyTitle">
+      <h2 id="storyTitle">Viva momentos inesquecíveis</h2>
+      <p>Era uma manhã clara quando, ao atravessar o saguão que respirava histórias de convidados e noites estreladas, senti que aquele lugar sabia ser tanto abrigo quanto descoberta. Cada quarto, cada corredor, guardava o convite discreto para a pausa — um convite que se faz presente nas janelas que se abrem para vales que fumegam na neblina e nas piscinas que refletem o céu.</p>
+      <p>Este site é uma pequena vitrine: abra as imagens, amplie as cenas, e deixe que a lembrança comece a tomar forma. A experiência completa do resort — piscinas, spa, restaurante, espaços de lazer e a companhia da natureza — está apenas a um clique de ser conferida com mais atenção.</p>
+      <p class="byline">— Projeto pronto para publicação no seu repositório GitHub Pages. Substitua as imagens em /images e envie ao repositório.</p>
+    </section>
+
+    <footer class="site-foot">
+      <div class="contact">
+        <strong>Carol Marchi</strong><br>
+        (11) 985-926-746
+      </div>
+      <div>
+        <small>Instruções: coloque suas imagens em uma pasta <code>/images</code> com os nomes usados nos placeholders (photo-1.jpg etc.). Os arquivos "-thumb" são proporcionais em tamanho — você pode usar as mesmas imagens se preferir.</small>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal para ampliar as imagens -->
+  <div id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="close-hint">Clique fora da imagem ou pressione Esc para fechar</div>
+    <img id="modalImg" src="" alt="Imagem ampliada">
+  </div>
+
+  <script>
+    (function(){
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      const thumbs = document.querySelectorAll('.thumb-card img');
+
+      function open(src, alt){
+        modalImg.src = src;
+        modalImg.alt = alt || 'Imagem ampliada';
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+      }
+
+      function close(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        modalImg.src = '';
+      }
+
+      thumbs.forEach(img => {
+        const full = img.dataset.full || img.src;
+        img.addEventListener('click', ()=> open(full, img.alt));
+        img.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(full, img.alt); } });
+      });
+
+      modal.addEventListener('click', (e)=>{ if(e.target === modal) close(); });
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+      modalImg.addEventListener('dragstart', e=>e.preventDefault());
+    })();
+  </script>
+</body>
+</html>
