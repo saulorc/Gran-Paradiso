@@ -100,15 +100,17 @@ body {
   margin-bottom: 0.5rem;
   color: #2c3e50;
 }
-.card img {
-  width: 2rem;
-  height: auto;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
-}
 .card:hover {
   transform: translateY(-5px);
+}
+.icon-img {
+  width: 20px;   /* mesmo tamanho do ícone Font Awesome */
+  height: 20px;
+  margin-right: 8px; /* espaço entre o ícone e o texto */
+  vertical-align: middle;
+}
+.icon-img:hover {
+  filter: brightness(1.2);
 }
 
 /* Destaques */
