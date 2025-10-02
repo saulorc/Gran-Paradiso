@@ -100,6 +100,11 @@ body {
   margin-bottom: 0.5rem;
   color: #2c3e50;
 }
+.card img {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
 .card:hover {
   transform: translateY(-5px);
 }
