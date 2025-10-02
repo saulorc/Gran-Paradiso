@@ -101,6 +101,8 @@ body {
   color: #2c3e50;
 }
 .card img {
+  width: 2rem;
+  height: auto;
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #2c3e50;
