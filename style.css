@@ -13,7 +13,7 @@ body {
 
 /* Containers */
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -141,9 +141,6 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
-
-
 
 /* Features */
 .features {
