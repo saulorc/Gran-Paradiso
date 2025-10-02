@@ -103,14 +103,7 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
-.feature .icon-img {
-  width: 40px;   /* ajuste conforme o tamanho dos outros ícones */
-  height: 40px;
-  margin-bottom: 10px; /* espaço entre o ícone e o título */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 /* Destaques */
 .highlight {
