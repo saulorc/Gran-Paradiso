@@ -103,14 +103,13 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
-.icon-img {
-  width: 20px;   /* mesmo tamanho do ícone Font Awesome */
-  height: 20px;
-  margin-right: 8px; /* espaço entre o ícone e o texto */
-  vertical-align: middle;
-}
-.icon-img:hover {
-  filter: brightness(1.2);
+.feature .icon-img {
+  width: 40px;   /* ajuste conforme o tamanho dos outros ícones */
+  height: 40px;
+  margin-bottom: 10px; /* espaço entre o ícone e o título */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Destaques */
