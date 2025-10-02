@@ -111,11 +111,11 @@ body {
   transition: background 0.3s ease;
 }
 .btn-primary {
-  background: #2563eb;
+  background: #25d366;
   color: #fff;
 }
 .btn-primary:hover {
-  background: #1d4ed8;
+  background: #1ebe5d;
 }
 .btn-whatsapp {
   background: #25d366;
