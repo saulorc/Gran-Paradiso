@@ -72,6 +72,76 @@ body {
   text-align: center;
   color: #1a1a1a;
 }
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+.section {
+  margin: 3rem 0;
+}
+
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Destaques */
+.highlight {
+  background: #f1c40f;
+  color: #000;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+/* Localização */
+.location {
+  background: #ecf0f1;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.location i {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-top: 1rem;
+}
+
+/* Pôr-do-sol redondo */
+.sunset {
+  display: flex;
+  justify-content: center;
+}
+.sunset img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+
 
 /* Features */
 .features {
